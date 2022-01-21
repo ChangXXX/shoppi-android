@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.shoppi.app.Module.GlideApp
 import org.json.JSONObject
 
 class HomeFragement: Fragment() {
@@ -44,7 +45,7 @@ class HomeFragement: Fragment() {
             tvAppbarTitle.text = titleValue.text
 
             val ivAppLogo = view.findViewById<ImageView>(R.id.iv_appbar_logo)
-            Glide.with(view).load(titleValue.iconUrl).centerCrop().into(ivAppLogo)
+            GlideApp.with(view).load(titleValue.iconUrl).centerCrop().into(ivAppLogo)
         }
     }
 }
