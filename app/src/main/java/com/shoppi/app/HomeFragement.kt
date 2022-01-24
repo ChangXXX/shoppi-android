@@ -26,11 +26,8 @@ class HomeFragement: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val button = view.findViewById<Button>(R.id.btn_enter_product_detail)
-//        button.setOnClickListener {
-//            findNavController().navigate(R.id.action_home_to_product_detail)
-//        }
-
+        val toolbarTitle = view.findViewById<TextView>(R.id.toolbar_home_title)
+        val toolbarIcon = view.findViewById<ImageView>(R.id.toolbar_home_icon)
         val assetLoader = AssetLoader()
         val homeData = assetLoader.getJsonString(requireContext(), "home.json")
 
@@ -39,13 +36,9 @@ class HomeFragement: Fragment() {
             val title = jsonObject.getJSONObject("title")
             val text = title.getString("text")
             val iconUrl = title.getString("icon_url")
-            val titleValue = Title(text, iconUrl)
 
-            val tvAppbarTitle = view.findViewById<TextView>(R.id.tv_appbar_title)
-            tvAppbarTitle.text = titleValue.text
-
-            val ivAppLogo = view.findViewById<ImageView>(R.id.iv_appbar_logo)
-            GlideApp.with(view).load(titleValue.iconUrl).centerCrop().into(ivAppLogo)
+            toolbarTitle.text = text
+            GlideApp.with(view).load(iconUrl).into(toolbarIcon)
         }
     }
 }

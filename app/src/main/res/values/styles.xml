@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- TextStyle -->
+    <style name="TextHeadLine5.Black02" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/shoppi_black_02</item>
+    </style>
+    <style name="TextHeadLine5.Black02.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
     <style name="TextMedium" parent="TextAppearance.AppCompat.Medium">
         <item name="android:textColor">@color/shoppi_black_01</item>
     </style>
-
     <style name="TextMedium.Purple">
         <item name="android:textColor">@color/shoppi_purple</item>
     </style>
@@ -45,12 +50,5 @@
     <style name="TextCaption2" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">11sp</item>
         <item name="android:textColor">@color/shoppi_black_01</item>
-    </style>
-    <style name="TextAppBar" parent="TextAppearance.AppCompat.Medium">
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/shoppi_black_02</item>
-    </style>
-    <style name="TextAppBar.Bold">
-        <item name="android:textStyle">bold</item>
     </style>
 </resources>
