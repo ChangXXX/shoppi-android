@@ -7,4 +7,6 @@
     <string name="label_home_icon">홈</string>
     <string name="label_cart_icon">장바구니</string>
     <string name="app_logo">앱 로고</string>
+    <string name="banner_image">배너</string>
+    <string name="banner_detail_image">배너상세이미지</string>
 </resources>
