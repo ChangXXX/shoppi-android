@@ -1,4 +1,4 @@
-package com.shoppi.app.Data
+package com.shoppi.app.model
 
 import com.google.gson.annotations.SerializedName
 

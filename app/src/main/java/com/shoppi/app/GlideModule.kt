@@ -1,4 +1,4 @@
-package com.shoppi.app.Module
+package com.shoppi.app
 
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule
