@@ -16,4 +16,5 @@
     <string name="app_logo">앱 로고</string>
     <string name="banner_image">배너</string>
     <string name="banner_detail_image">배너상세이미지</string>
+    <string name="label_category_new">NEW</string>
 </resources>
