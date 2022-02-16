@@ -70,7 +70,7 @@
 
         <ImageView
             android:id="@+id/iv_banner_detail_thumbnail"
-            imageUrl="@{banner.productDetail.thumbnailImageUrl}"
+            imageUrl="@{banner.product.thumbnailImageUrl}"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="12dp"
@@ -88,7 +88,7 @@
             android:layout_marginEnd="16dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="@{banner.productDetail.brandName}"
+            android:text="@{banner.product.brandName}"
             app:layout_constraintEnd_toEndOf="@id/bg_banner_product_detail"
             app:layout_constraintStart_toEndOf="@id/iv_banner_detail_thumbnail"
             app:layout_constraintTop_toTopOf="@id/bg_banner_product_detail"
@@ -99,7 +99,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
-            android:text="@{banner.productDetail.label}"
+            android:text="@{banner.product.label}"
             app:layout_constraintEnd_toEndOf="@id/tv_banner_detail_brand_label"
             app:layout_constraintStart_toStartOf="@id/tv_banner_detail_brand_label"
             app:layout_constraintTop_toBottomOf="@id/tv_banner_detail_brand_label"
@@ -110,15 +110,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
-            android:text="@{@string/unit_discount_rate(banner.productDetail.discountRate)}"
+            android:text="@{@string/unit_discount_rate(banner.product.discountRate)}"
             app:layout_constraintStart_toStartOf="@id/tv_banner_detail_product_label"
             app:layout_constraintTop_toBottomOf="@id/tv_banner_detail_product_label"
             tools:text="9%" />
 
         <TextView
             android:id="@+id/tv_banner_detail_product_discount_price"
-            discountRate="@{banner.productDetail.discountRate}"
-            priceAmount="@{banner.productDetail.price}"
+            discountRate="@{banner.product.discountRate}"
+            priceAmount="@{banner.product.price}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
@@ -128,7 +128,7 @@
 
         <TextView
             android:id="@+id/tv_banner_detail_product_price"
-            priceAmount="@{banner.productDetail.price}"
+            priceAmount="@{banner.product.price}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
