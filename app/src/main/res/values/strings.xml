@@ -17,4 +17,5 @@
     <string name="banner_image">배너</string>
     <string name="banner_detail_image">배너상세이미지</string>
     <string name="label_category_new">NEW</string>
+    <string name="btn_cart">장바구니 담기</string>
 </resources>
