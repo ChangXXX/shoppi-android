@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
     app:startDestination="@id/navigation_home">
+
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.shoppi.app.ui.home.HomeFragement"
@@ -13,6 +14,7 @@
             android:id="@+id/action_home_to_product_detail"
             app:destination="@id/navigation_product_detail" />
     </fragment>
+
     <fragment
         android:id="@+id/navigation_category"
         android:name="com.shoppi.app.ui.category.CategoryFragment"
@@ -22,16 +24,19 @@
             android:id="@+id/action_category_to_category_detail"
             app:destination="@id/navigation_category_detail" />
     </fragment>
+
     <fragment
         android:id="@+id/navigation_cart"
         android:name="com.shoppi.app.ui.CartFragment"
         android:label="CartFragment"
         tools:layout="@layout/fragment_cart" />
+
     <fragment
         android:id="@+id/navigation_product_detail"
         android:name="com.shoppi.app.ui.ProductDetailFragment"
         android:label="ProductDetailFragment"
         tools:layout="@layout/fragment_product_detail" />
+
     <fragment
         android:id="@+id/navigation_category_detail"
         android:name="com.shoppi.app.ui.categorydetail.CategoryDetailFragment"

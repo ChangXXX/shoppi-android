@@ -40,8 +40,8 @@ class CategoryFragment : Fragment() {
             categoryAdapter.submitList(it)
         }
 
-        viewModel.openCategoryEvent.observe(viewLifecycleOwner, EventObserver {
-            openCategoryDetail(it.categoryId, it.label)
+        viewModel.openCategoryEvent.observe(viewLifecycleOwner, EventObserver { category ->
+            openCategoryDetail(category.categoryId, category.label)
         })
 
     }
