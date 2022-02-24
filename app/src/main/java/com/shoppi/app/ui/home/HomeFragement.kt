@@ -10,6 +10,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -17,10 +18,13 @@ import com.shoppi.app.GlideApp
 import com.shoppi.app.R
 import com.shoppi.app.common.KEY_PRDOUCT_ID
 import com.shoppi.app.databinding.FragmentHomeBinding
+import com.shoppi.app.ui.categorydetail.ProductPromotionAdapter
+import com.shoppi.app.ui.categorydetail.SectionTitleAdapter
 import com.shoppi.app.ui.common.EventObserver
+import com.shoppi.app.ui.common.ProductClickListener
 import com.shoppi.app.ui.common.ViewModelFactory
 
-class HomeFragement : Fragment() {
+class HomeFragement : Fragment(), ProductClickListener {
 
     private val viewModel: HomeViewModel by viewModels { ViewModelFactory(requireContext()) }
     private lateinit var binding: FragmentHomeBinding
@@ -41,6 +45,7 @@ class HomeFragement : Fragment() {
         setToolbar()
         setTopBanners()
         setNavigation()
+        setListAdapter()
     }
 
     private fun setToolbar() {
@@ -71,7 +76,6 @@ class HomeFragement : Fragment() {
             }.attach()
         }
     }
-
     private fun setNavigation() {
         viewModel.openProductDetailEvent.observe(viewLifecycleOwner, EventObserver { productId ->
             findNavController().navigate(
@@ -80,5 +84,23 @@ class HomeFragement : Fragment() {
                 )
             )
         })
+    }
+
+    private fun setListAdapter() {
+        val titleAdapter = SectionTitleAdapter()
+        val promotionAdapter = ProductPromotionAdapter(this)
+        binding.rvHomePromotion.adapter = ConcatAdapter(titleAdapter, promotionAdapter)
+        viewModel.promotion.observe(viewLifecycleOwner) { promotions ->
+            titleAdapter.submitList(listOf(promotions.title))
+            promotionAdapter.submitList(promotions.items)
+        }
+    }
+
+    override fun onProductClick(productId: String) {
+        findNavController().navigate(
+            R.id.action_home_to_product_detail, bundleOf(
+                KEY_PRDOUCT_ID to "desk-1"
+            )
+        )
     }
 }
