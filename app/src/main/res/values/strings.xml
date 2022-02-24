@@ -18,4 +18,10 @@
     <string name="banner_detail_image">배너상세이미지</string>
     <string name="label_category_new">NEW</string>
     <string name="btn_cart">장바구니 담기</string>
+    <string name="label_cart">장바구니</string>
+    <string name="label_cart_purchase_button">선택한 상품 주문하기</string>
+    <string name="description_cart_item_thumbnail">장바구니에 추가한 상품 이미지</string>
+    <string name="description_btn_delete_cart_item">장바구니에 추가한 상품 제거 버튼</string>
+    <string name="description_btn_minus_cart_item">장바구니에 추가한 상품 개수 줄이는 버튼</string>
+    <string name="description_btn_plus_cart_item">장바구니에 추가한 상품 개수 추가 버튼</string>
 </resources>

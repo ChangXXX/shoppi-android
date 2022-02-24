@@ -30,15 +30,19 @@
     <style name="TextHeadLine5.Black02" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="android:textColor">@color/shoppi_black_02</item>
     </style>
+
     <style name="TextHeadLine5.Black02.Bold">
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="TextMedium" parent="TextAppearance.AppCompat.Medium">
         <item name="android:textColor">@color/shoppi_black_01</item>
     </style>
+
     <style name="TextMedium.Bold" >
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="TextMedium.Purple">
         <item name="android:textColor">@color/shoppi_purple</item>
     </style>
@@ -47,19 +51,24 @@
         <item name="android:textColor">@color/shoppi_purple</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="TextSubTitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textColor">@color/shoppi_black_01</item>
     </style>
+
     <style name="TextSubTitle1.Bold">
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="TextSubTitle1.White">
         <item name="android:textColor">@color/shoppi_white</item>
     </style>
+
     <style name="TextSubTitle1.White.Bold">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/shoppi_white</item>
     </style>
+
     <style name="TextSubTitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="android:textColor">@color/shoppi_black_01</item>
     </style>
@@ -97,6 +106,11 @@
     <style name="TextCaption1.White">
         <item name="android:textColor">@color/shoppi_white</item>
     </style>
+
+    <style name="TextCaption1.Grey01">
+        <item name="android:textColor">@color/shoppi_grey_01</item>
+    </style>
+
     <style name="TextCaption1.Grey03">
         <item name="android:textColor">@color/shoppi_grey_03</item>
     </style>
