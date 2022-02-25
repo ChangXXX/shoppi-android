@@ -8,6 +8,7 @@ import com.shoppi.app.databinding.ItemCartSectionHeaderBinding
 import com.shoppi.app.model.CartHeader
 import com.shoppi.app.model.CartItem
 import com.shoppi.app.model.CartProduct
+import okhttp3.internal.notify
 
 private const val VIEW_TYPE_HEADER = 0
 private const val VIEW_TYPE_ITEM = 1
@@ -55,6 +56,20 @@ class CartAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return cartProducts.size
     }
 
+    fun submitHeaderAndItemList(items: List<CartItem>) {
+        val itemsGroups = items.groupBy { it.brandName } // MAP key- brandName
+        val products = mutableListOf<CartProduct>()
+        itemsGroups.entries.forEach { entry ->
+            val header = CartHeader(entry.key)
+            products.add(header)
+            products.addAll(entry.value)
+            // brand Name entry.key
+            // 해당 Item entry.value
+        }
+        cartProducts.addAll(products)
+        notifyItemRangeInserted(cartProducts.size, products.size)
+    }
+
     class HeaderViewHolder(private val binding: ItemCartSectionHeaderBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
@@ -64,7 +79,8 @@ class CartAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         }
     }
 
-    class ItemViewHolder(private val binding: ItemCartSectionBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ItemViewHolder(private val binding: ItemCartSectionBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: CartItem) {
             binding.item = item
