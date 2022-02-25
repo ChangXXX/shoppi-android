@@ -39,5 +39,4 @@ class CartFragment: Fragment() {
             cartAdapter.submitHeaderAndItemList(cartItems)
         }
     }
-
 }
